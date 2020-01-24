@@ -1,0 +1,249 @@
+:root{  
+    --hat-bg-color:        #282828;
+    --hat-txt-color:       #eaf5ffbe;
+    --hat-txt-hover-color: #0f1b27;
+}
+
+*,
+*:before,
+*:after{
+   box-sizing: border-box; 
+}
+
+body{
+    background-color: #d1f6ffd8;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#link{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hat,
+.content_cont,
+.foot{
+    background-color: var(--hat-bg-color);
+    color: var(--hat-txt-color);
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+
+    margin-left:  auto;
+    margin-right: auto;
+
+    border-radius: 5px;
+
+    width: 100%;
+    max-width: 1200px;
+
+    display: flex; 
+}
+
+/*-----Шапка-----*/
+.hat{
+    height: 60px;
+    border-radius: 0 0 5px 5px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.left_block,
+.center_block,
+.right_block {
+   /* background-color:#ffffffab;  Позже убрать */
+    width: 30%;
+    height: 100%;
+}
+
+.hat div{
+    margin: 0 10px;
+    text-align: center;
+}
+
+.hat a{
+    color: var(--hat-txt-color); 
+    transition: linear 150ms;
+}
+
+.hat a:hover{
+    color: var(--hat-txt-hover-color);
+    text-shadow: 0 0 5px var(--hat-txt-color);
+    font-size: 17px;
+}
+
+/* левый блок */
+.left_block{
+    margin-right: 3px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* конец левого блока */
+
+/* центральный блок */
+.center_block{
+    margin-left:  3px;
+    margin-right: 3px;
+}
+
+.logo_container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.img_logo{
+    height: 100%;
+    transition: ease-in 150ms;
+}
+
+.img_logo:hover{
+    -webkit-filter: drop-shadow(0 0 5px var(--hat-txt-color));
+    filter: drop-shadow(0 0 5px var(--hat-txt-color));
+    transform: rotate(25deg);
+}
+/* конец центрального блока */
+
+/* правый блок */
+.right_block{
+    margin-left: 3px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+/* конец правого блока */
+
+/*----- конец шапки ------*/
+
+
+
+/*----- Тело -----
+ * внутри main.css / about.css / creators.css ect.
+ *----- конец тела -----*/
+
+
+
+/*----- foorer -----*/
+.foot{
+    height: 60px;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    
+}
+/*----- конец footer -----*/
+
+
+
+/*------ Адаптация -------*/
+@media screen and
+  (min-width: 801px) and
+  (max-width: 1042px){    
+    body{
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    /*-----Шапка-----*/
+    .hat{
+        margin: 0; 
+    }
+    
+    /* левый блок */
+    .left_block{
+        margin-right: 1px;
+    }
+    /* конец левого блока */
+    
+    /* центральный блок */
+    .center_block{
+        margin: 0;
+        max-width: fit-content;
+    }
+    
+    .logo_container{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .img_logo{}
+    
+    .img_logo:hover{}
+    /* конец центрального блока */
+    
+    /* правый блок */
+    .right_block{
+        margin-left: 1px;
+    }
+    
+    .hat div{
+        margin: 0 8px;
+        text-align: center;
+    }
+    
+    .hat p{     }
+    
+    .hat p:hover{}
+    /* конец правого блока */
+    
+    
+    /*----- конец шапки ------*/
+}
+
+/* телефоны и планшеты */
+@media screen and 
+ (min-width: 480px) and 
+ (max-width: 800px){
+    
+    .hat{
+        justify-content: start;
+    }
+
+    .hat div{
+        margin: 0;
+        text-align: center;
+    }
+/**
+ * сделать анимацию и выдвижной список
+ */
+    .left_block{
+        margin: 0;
+        width: 60px;
+    } 
+
+    .left_block p{
+        visibility: collapse;
+    }
+    .right_block{ visibility: collapse;}
+}
+
+/* телефоны по-меньше */
+@media screen and 
+ (max-width: 479px){
+    .left_block p{
+        visibility: collapse;
+    }
+    .hat{
+        justify-content: start;
+    }
+
+    .hat div{
+        margin: 0;
+        text-align: center;
+    }
+/**
+ * сделать анимацию и выдвижной список
+ */
+    .left_block{
+        margin: 0;
+        width: 60px;
+    } 
+
+    .left_block p{
+        visibility: collapse;
+    }
+    .right_block{ visibility: collapse;}
+}

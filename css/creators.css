@@ -1,0 +1,98 @@
+:root{  
+    --hat-bg-color:        #282828;
+    --hat-txt-color:       #eaf5ff;
+    --hat-txt-hover-color: #0f1b27;
+}
+
+.content_cont{ 
+    margin: 2vh auto;
+    padding: 2vh;
+
+              /*screen - hat - margin-top*/
+    height: calc(100vh - 60px - 2vh); 
+    display: flex;
+}
+
+.container_profiles{
+    /*display: grid;
+    grid-template-columns: 1fr 1fr;  */
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap;
+}
+
+.container_block{
+    display: flex;
+    justify-content: center; 
+    
+}
+
+.block{
+    margin: 5px;
+    padding: 20px;
+    background: var(--hat-txt-color);
+    border-radius: 5px;
+
+    height: fit-content;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: linear 300ms;
+}
+  
+.img_block{
+    display: flex;
+    justify-content: center;
+    background: var(--hat-txt-color);
+}
+.img_block > img{
+    border-radius: 5px;
+}
+.decription_block{
+    width: 100%;
+    background: var(--hat-txt-color);
+}
+
+.decription > b{
+    font-size: 18px;
+}
+
+.decription{
+    background: var(--hat-txt-color);
+    color: var(--hat-bg-color);
+    font-size: 15px;
+    margin: 4px;
+    text-align: center;
+}
+  
+.block:hover{
+    box-shadow: 0 0 20px var(--hat-txt-color);
+    flex-shrink: 0;
+}
+
+/*------ Адаптация -------*/
+@media screen and
+  (min-width: 801px) and
+  (max-width: 1042px){    
+    
+}
+
+/* телефоны и планшеты */
+@media screen and 
+ (min-width: 480px) and 
+ (max-width: 800px){
+     .content_cont{
+         height: max-content;
+         min-height: 100vh;
+     }
+}
+
+/* телефоны по-меньше */
+@media screen and 
+ (max-width: 479px){
+    .content_cont{
+        height: max-content;
+        min-height: 100vh;
+    }
+}

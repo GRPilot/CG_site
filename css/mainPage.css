@@ -1,0 +1,13 @@
+:root{  
+    --hat-bg-color:        #282828;
+    --hat-txt-color:       #eaf5ffbe;
+    --hat-txt-hover-color: #0f1b27;
+}
+
+
+.content_cont{ 
+    margin: 20px auto;
+
+              /*screen - hat - margin-top*/
+    height: calc(100vh - 60px - 20px); 
+}
