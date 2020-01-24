@@ -2,6 +2,10 @@
     --hat-bg-color:        #282828;
     --hat-txt-color:       #eaf5ffbe;
     --hat-txt-hover-color: #0f1b27;
+    --border_radius:       1vw;
+    --height_hat_foot:     6vh;
+    --shadow_fall:         0.5vh;
+    --margins_hat_blocks:  1vw;
 }
 
 *,
@@ -13,7 +17,7 @@
 body{
     background-color: #d1f6ffd8;
     margin: 0;
-    font-size: 14px;
+    font-size: 11pt;
     font-weight: 500;
 }
 
@@ -32,18 +36,18 @@ body{
     margin-left:  auto;
     margin-right: auto;
 
-    border-radius: 5px;
+    border-radius: var(--border_radius);
 
     width: 100%;
-    max-width: 1200px;
+    max-width: 62vw;
 
     display: flex; 
 }
 
 /*-----Шапка-----*/
 .hat{
-    height: 60px;
-    border-radius: 0 0 5px 5px;
+    height: var(--height_hat_foot);
+    border-radius: 0 0 var(--border_radius) var(--border_radius);
 
     justify-content: center;
     align-items: center;
@@ -58,7 +62,7 @@ body{
 }
 
 .hat div{
-    margin: 0 10px;
+    margin: 0 1vw;
     text-align: center;
 }
 
@@ -69,13 +73,13 @@ body{
 
 .hat a:hover{
     color: var(--hat-txt-hover-color);
-    text-shadow: 0 0 5px var(--hat-txt-color);
-    font-size: 17px;
+    text-shadow: 0 0 var(--shadow_fall) var(--hat-txt-color);
+    font-size: 13pt;
 }
 
 /* левый блок */
 .left_block{
-    margin-right: 3px;
+    margin-right: var(--margins_hat_blocks);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -85,8 +89,8 @@ body{
 
 /* центральный блок */
 .center_block{
-    margin-left:  3px;
-    margin-right: 3px;
+    margin-left:  var(--margins_hat_blocks);
+    margin-right: var(--margins_hat_blocks);
 }
 
 .logo_container{
@@ -101,15 +105,15 @@ body{
 }
 
 .img_logo:hover{
-    -webkit-filter: drop-shadow(0 0 5px var(--hat-txt-color));
-    filter: drop-shadow(0 0 5px var(--hat-txt-color));
+    -webkit-filter: drop-shadow(0 0 var(--shadow_fall) var(--hat-txt-color));
+    filter: drop-shadow(0 0 var(--shadow_fall) var(--hat-txt-color));
     transform: rotate(25deg);
 }
 /* конец центрального блока */
 
 /* правый блок */
 .right_block{
-    margin-left: 3px;
+    margin-left: var(--margins_hat_blocks);
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -126,12 +130,22 @@ body{
 
 
 
-/*----- foorer -----*/
+/*----- footet -----*/
 .foot{
-    height: 60px;
-    border-radius: 5px 5px 0 0;
+    height: var(--height_hat_foot);
+    border-radius: var(--border_radius) var(--border_radius) 0 0;
     display: flex;
-    
+    justify-content: space-between;
+}
+
+.foot div{
+    margin: 0 1vw;
+    text-align: center;
+}
+
+.left_block,
+.right_block{
+    background-color: #eaf5ff55;
 }
 /*----- конец footer -----*/
 
@@ -142,13 +156,14 @@ body{
   (min-width: 801px) and
   (max-width: 1042px){    
     body{
-        font-size: 12px;
+        font-size: 9pt;
         font-weight: 500;
     }
     
     /*-----Шапка-----*/
     .hat{
-        margin: 0; 
+        margin: 0 auto; 
+        width: 100vw;
     }
     
     /* левый блок */
