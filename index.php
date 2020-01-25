@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <link rel="stylesheet" type="text/css" href="css/mainPage.css">
-
+        <link rel="shortcut icon" href="img/LOGO.png" type="image/png">
         <title>Coding Group | ПКГХ</title>
     </head>
     <body>
@@ -15,7 +15,7 @@
             <div class="left_block">
                 <div class="home">
                     <img class="img_list" src="img/list.svg">
-                    <a id="link" href="index.html" target="_self">Главная</a>
+                    <a id="link" href="index.php" target="_self">Главная</a>
                 </div>
                 <div>
                     <a id="link" href="" target="_self">что-то</a>
@@ -36,7 +36,7 @@
                     <a id="link" href="about.html" target="_self">О проекте</a>
                 </div>
                 <div class="Creators_cont">
-                    <a id="link" href="php/creators.php" target="_self">Создатели</a>
+                    <a id="link" href="creators.php" target="_self">Создатели</a>
                 </div>
                 <div class="Tabel_cont">
                     <a id="link" href="https://goo.su/0EGB" target="_blank">Ранги</a>
@@ -44,8 +44,9 @@
             </div>
         </header>
 
+        <!-- Центральня панель (контент)-->
         <div class="content_cont wrap">
-            
+            <?php include('php/LoadWall.php');  ?>
         </div>
 
         <!--нижняя панель-->

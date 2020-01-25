@@ -5,17 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <link rel="stylesheet" type="text/css" href="css/about.css">
+        <link rel="stylesheet" type="text/css" href="css/creators.css">
         <link rel="shortcut icon" href="img/LOGO.png" type="image/png">
 
-        <script scr="js/parallax.js"></script>
-        <title>Coding Group | About</title>
+        <title>Coding Group | Creators</title>
     </head>
     <body>
         <!--Верхняя панель-->
         <header class="hat wrap">
             <div class="left_block">
-                <div>
+                <div class="home">
+                    <img class="img_list" src="img/list.svg">
                     <a id="link" href="index.php" target="_self">Главная</a>
                 </div>
             </div>
@@ -28,21 +28,21 @@
 
             <div class="right_block">
                 <div class="About_cont">
-                    <a id="link" target="_self">О проекте</a>
+                    <a id="link" href="about.html" target="_self">О проекте</a>
                 </div>
                 <div class="Creators_cont">
-                    <a id="link" href="creators.php" target="_self">Создатели</a>
+                    <a id="link" href="" target="_self">Создатели</a>
                 </div>
                 <div class="Tabel_cont">
                     <a id="link" href="https://goo.su/0EGB" target="_blank">Ранги</a>
                 </div>
             </div>
         </header>
-
+        
         <!-- Центральня панель (контент)-->
         <div class="content_cont wrap">
-            <div class="content">
-                
+            <div class="container_profiles">
+                <?php include ('php/showCreators.php'); ?>
             </div>
         </div>
 

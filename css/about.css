@@ -1,0 +1,11 @@
+.content_cont{
+    margin: 2vh auto;
+    padding: 2vh 2vw;
+    height: 100vh;
+
+}
+
+.content{
+    background-color: #ffffff44;
+    width: 100%;
+}

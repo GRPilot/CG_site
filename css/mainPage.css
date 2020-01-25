@@ -8,6 +8,7 @@
 .content_cont{ 
     margin: 20px auto;
 
-              /*screen - hat - margin-top*/
-    height: calc(100vh - 60px - 20px); 
+    height: 100vh;
+
+    padding: 1vh 1vw;
 }
