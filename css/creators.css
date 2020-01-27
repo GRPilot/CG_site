@@ -3,7 +3,7 @@
     --hat-txt-color:       #eaf5ff;
     --hat-txt-hover-color: #0f1b27;
 
-    --height-img:          300px;
+    --height-img:          35vh;
 }
 
 .content_cont{ 
@@ -50,7 +50,10 @@
 .img_block{
     display: flex;
     justify-content: center;
+
     background: var(--hat-txt-color);
+    overflow: hidden;
+    border-radius: 0.5vw;
 }
 .img_block > img{
     height: var(--height-img);
@@ -59,7 +62,7 @@
     transition: linear 150ms;
 }
 .img_block > img:hover{
-    height: calc(var(--height-img) + 2vh);
+    transform: scale(1.2);
 }
 
 

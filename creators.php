@@ -49,7 +49,9 @@
         <!--нижняя панель-->
         <footer class="foot wrap">
             <div class="left_block">
-                <p>© 2020 Сообщество Coding Group | PKoME</p>
+                <h4>© 2020 Сообщество Coding Group</h4>
+                <hr>
+                <p>Polytechnic College of municipal economy</p>
             </div>
             <div class="right_block">
                 <a class="vk_ref" href="https://vk.com/codinggroup">
